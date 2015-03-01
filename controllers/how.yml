@@ -1,0 +1,7 @@
+'get /employees':
+  sql: 'select * from employees'
+'post /employees':
+  sql: "insert into employees (first_name, last_name) values (':first_name', ':last_name')"
+  params:
+    ":first_name": "firstName"
+    ":last_name": "lastName"
